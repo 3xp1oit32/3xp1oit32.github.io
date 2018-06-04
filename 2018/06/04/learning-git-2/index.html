@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="git," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="get busy living or get busy dying">
-<meta name="keywords" content="network security, web security, exploit, 0-day, reverse-engineering">
-<meta property="og:type" content="website">
-<meta property="og:title" content="3xp1oit32 Security Zone">
-<meta property="og:url" content="https://3xp1oit32.github.io/index.html">
+<meta name="description" content="以上信息摘录自ruanyf的blog  git clone1git clone &amp;lt;版本库地址&amp;gt; &amp;lt;本地目录名&amp;gt; 支持多种协议 https/ssh/git/本地文件协议/ftp/rsync git remote为方便管理，git要求每个远程主机都必须有一个主机名，git remote 用于管理主机名 不带选项时，git remote 列出所有远程主机 12git remot">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="learning-git-2">
+<meta property="og:url" content="https://3xp1oit32.github.io/2018/06/04/learning-git-2/index.html">
 <meta property="og:site_name" content="3xp1oit32 Security Zone">
-<meta property="og:description" content="get busy living or get busy dying">
+<meta property="og:description" content="以上信息摘录自ruanyf的blog  git clone1git clone &amp;lt;版本库地址&amp;gt; &amp;lt;本地目录名&amp;gt; 支持多种协议 https/ssh/git/本地文件协议/ftp/rsync git remote为方便管理，git要求每个远程主机都必须有一个主机名，git remote 用于管理主机名 不带选项时，git remote 列出所有远程主机 12git remot">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-04T13:00:59.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="3xp1oit32 Security Zone">
-<meta name="twitter:description" content="get busy living or get busy dying">
+<meta name="twitter:title" content="learning-git-2">
+<meta name="twitter:description" content="以上信息摘录自ruanyf的blog  git clone1git clone &amp;lt;版本库地址&amp;gt; &amp;lt;本地目录名&amp;gt; 支持多种协议 https/ssh/git/本地文件协议/ftp/rsync git remote为方便管理，git要求每个远程主机都必须有一个主机名，git remote 用于管理主机名 不带选项时，git remote 列出所有远程主机 12git remot">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://3xp1oit32.github.io/"/>
+  <link rel="canonical" href="https://3xp1oit32.github.io/2018/06/04/learning-git-2/"/>
 
 
 
 
 
-  <title>3xp1oit32 Security Zone</title>
+  <title>learning-git-2 | 3xp1oit32 Security Zone</title>
   
 
 
@@ -144,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -250,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/04/learning-git-2/" itemprop="url">learning-git-2</a></h1>
+          <h1 class="post-title" itemprop="name headline">learning-git-2</h1>
         
 
         <div class="post-meta">
@@ -302,9 +300,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>以上信息摘录自ruanyf的<a href="&quot;http://www.ruanyifeng.com/blog/2014/06/git_remote.html&quot;">blog</a></p>
 </blockquote>
 <h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;版本库地址&gt; &lt;本地目录名&gt;</span><br></pre></td></tr></table></figure>
@@ -322,8 +318,6 @@
 <p><strong> 上面命令表示删除<code>origin</code>主机的<code>master</code>分支</strong><br><strong> 如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略 </strong><br><code>git push origin</code><br><strong> 上面命令表示，将当前分支推送到<code>origin</code>主机的对应分支</strong><br><strong> 如果当前分支只有一个追踪分支，啊么主机名都可以省略 </strong><br><code>git push</code><br><strong> 如果当前分支与多个主机存在追踪关系，则使用<code>-u</code>选定一个默认主机，后面可以不加参数使用<code>git push</code><br><code>git push -u origin master</code><br>上面命令将本地的<code>master</code>分支推送到<code>origin</code>主机，同时指定<code>origin</code>为默认主机，后面就可以不加任何参数使用<code>git push</code>了</strong><br> <strong> 不带任何参数的<code>git push</code>,默认只推送当前分支，这叫做simple方式，此外还有一种matching方式，会推送所有有对应远程分支的本地分支，git 2.0之前为matching，现在默认为simple。如果要改变设置，可以使用<code>git config</code> </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global push.default matching</span><br><span class="line">or</span><br><span class="line">git config --global push.default simple</span><br></pre></td></tr></table></figure></p>
 <p><strong> 还有一种情况，就是不管是否存在对应的远程分支，将本地的所有分支都推送到远程主机，这时需要使用<code>--all</code>选项。</strong><br><code>git push -all origin</code><br><strong> 如果远程的版本比本地要新，推送是Git会报错，要求在本地做<code>git pull</code>合并差异，然后再推送，这时如果一定要推送，可以使用<code>--force</code>选项。</strong><br><code>git push --force origin</code><br><strong>上面命令导致远程主机上的版本被覆盖 </strong><br><strong> <code>git push</code>不会推送tag，除非使用<code>--tags</code>选项 </strong><br><code>git push origin --tags</code></p>
 
-          
-        
       
     </div>
     
@@ -338,275 +332,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://3xp1oit32.github.io/2018/06/03/learning-git/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="3xp1oit32">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/inside.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="3xp1oit32 Security Zone">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/03/learning-git/" itemprop="url">Learning-git</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-03T15:32:28+08:00">
-                18-06-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/git/" rel="tag"># git</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p><img src="http://www.ruanyifeng.com/blogimg/asset/2014/bg2014061202.jpg" alt="图片来自ruanyf的blog" title="图片来自ruanyif的blog"> </p>
-<h2 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h2><ol>
-<li>workspace 工作区</li>
-<li>Index / Stage 暂存区</li>
-<li>Repository 仓库区（或本地仓库）</li>
-<li>Remote （远程仓库）</li>
-</ol>
-<h2 id="新建代码库"><a href="#新建代码库" class="headerlink" title="新建代码库"></a>新建代码库</h2><p><strong> 当前目录新建一个Git代码库 </strong></p>
-<pre><code>git init
-</code></pre><p><strong> 新建一个目录，初始化为Git代码库 </strong></p>
-<pre><code>git init [project name]
-</code></pre><p><strong> 下载一个项目和它的这个那个代码历史 </strong></p>
-<pre><code>git clone [url]
-</code></pre>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/03/learning-git/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/03/learning-git/" rel="next" title="Learning-git">
+                <i class="fa fa-chevron-left"></i> Learning-git
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://3xp1oit32.github.io/2018/06/02/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="3xp1oit32">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/inside.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="3xp1oit32 Security Zone">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/02/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T22:00:00+08:00">
-                18-06-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/02/hello-world/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -616,10 +371,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -627,6 +383,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -647,8 +407,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -719,6 +488,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone"><span class="nav-number">1.</span> <span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-remote"><span class="nav-number">2.</span> <span class="nav-text">git remote</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-fetch"><span class="nav-number">3.</span> <span class="nav-text">git fetch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-pull"><span class="nav-number">4.</span> <span class="nav-text">git pull</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-push"><span class="nav-number">5.</span> <span class="nav-text">git push</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -855,6 +640,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
